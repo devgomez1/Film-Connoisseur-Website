@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Connoisseur</title>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./tailwind-config.js"></script>
     <link
@@ -15,23 +15,23 @@
     <!-- HTML FOR YOUR PAGES GOES HERE -->
 
     <div class="min-h-full">
-      <nav class="bg-gray-800">
+      <nav class="bg-red-800 navBorder">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="flex h-16 items-center justify-between">
+          <div class="flex h-20 items-center justify-between">
             <div class="flex items-center">
               <div class="flex-shrink-0">
                 
               </div>
               <div class="hidden md:block">
-                <div class="ml-10 flex items-baseline space-x-4 mr-4">
+                <div class="absolute left-5 top-9 items-start ">
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                  <a href="#" class="bg-gray-900 text-red-500 px-3 py-2 rounded-md text-lg font-large " aria-current="page">Movie Connoisseur</a>
+                  <a href="#" class="bg-slate-900 text-yellow-300 px-3 py-2 rounded-md text-lg font-large " aria-current="page">Movie Connoisseur</a>
     
-                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">New Releases</a>
+                  <a href="#" class="text-yellow-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">New Releases</a>
     
-                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">ABOUT</a>
+                  <a href="#" class="text-yellow-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">ABOUT</a>
     
-                  <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Find Info</a>
+                  <a href="#" class="text-yellow-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Find Info</a>
   
                 </div>
               </div>
@@ -75,36 +75,38 @@
        
         </div>
       </nav>
+
+    <div class="moviecollage"></div>
     
      <!-- <header class="bg-white shadow">
         <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
           <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
         </div>
       </header>-->
-      <main>
+      <main class="mainBorder">
         <!-- OUTTER DIVE-->
-        <div class="bg-slate-500 mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
+        <div class="bg-red-800 mx-auto max-w-auto py-6 sm:px-6 lg:px-8 testHeight">
         <div class="columns-2 flex flex-row">
         <!-- Left Container-->
-          <div class=col-4>
-            <h3 class="space-y-4">
+          <div class="col-4 itemsAlign pr-10">
+            <h3 class="space-y-4 text-yellow-300">
               New Releases
             </h3>
             <br>
             <!--2 Movie img and title-->
-            <div class="space-y-4">
-            <div class="basis-1/3 box-border h-32 w-32 p-4 border-4 ">box 1</div>
-            <div class="basis-1/3 box-border h-32 w-32 p-4 border-4 ">box 2></div>
+            <div class="space-y-4 text-yellow-300">
+            <div class="basis-1/3 box-border h-60 w-90 p-4 border-4 rounded-[15px]">box 1</div>
+            <div class="basis-1/3 box-border h-60 w-90 p-4 border-4 rounded-[15px]">box 2></div>
           </div>
           </div>
 
           <!-- Right Container-->
           <div>
             <!--Search Div-->
-            <div class="col-8">
+            <div class="mx-auto">
               <div class="space-y-4">
                 <div class="lg:grid lg:grid-cols- sm:items-start sm:gap-4 sm:border-gray-200 sm:pt-5">
-                  <label for="movie-info" class="block text-lg font-lg text-white sm:mt-px sm:pt-2">Find Info About Movie</label>
+                  <label for="movie-info" class="block text-lg font-lg text-yellow-300 sm:mt-px sm:pt-2">Find Info About Movie</label>
                   <div class="mt-1 sm:col-span-2 sm:mt-0">
                     <input type="text" name="movie-info" id="movie-info" class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm">
                   </div>
@@ -118,12 +120,10 @@
           <br>
           <!--Returns 3 Review Divs-->
           <div class="flex space-x-4 flex-row py-6">
-            <div class="basis-1/3 box-border h-32 w-32 p-4 border-4 ">box 1
-              
+            <div class="basis-1/3 box-border h-auto w-200 p-4 border-4 text-yellow-300 rounded-[15px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod suscipit neque cumque veniam! Suscipit modi laboriosam asperiores, ex unde qui laudantium sunt odio, ipsam soluta necessitatibus aperiam facilis fugiat consequatur?
             </div>
-            <div class="basis-1/3 box-border h-32 w-32 p-4 border-4 ">box 2</div>
-            <div class="basis-1/3 box-border h-32 w-32 p-4 border-4 ">box 3</div>
-
+            <div class="basis-1/3 box-border h-auto w-200 p-4 border-4 text-yellow-300 rounded-[15px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod suscipit neque cumque veniam! Suscipit modi laboriosam asperiores, ex unde qui laudantium sunt odio, ipsam soluta necessitatibus aperiam facilis fugiat consequatur?</div>
+            <div class="basis-1/3 box-border h-auto w-200 p-4 border-4 text-yellow-300 rounded-[15px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod suscipit neque cumque veniam! Suscipit modi laboriosam asperiores, ex unde qui laudantium sunt odio, ipsam soluta necessitatibus aperiam facilis fugiat consequatur?</div>
           </div>
         </div>
         </div>

@@ -1,0 +1,37 @@
+.moviecollage {
+    height: 600px;
+    width: 100%;
+    background-image: url(./images/moivecollage.jpg);
+    background-size: cover;
+    background-position: center;
+    border: solid 10px;
+    border-color: black;
+}
+
+.mainBorder {
+    border-left: solid 10px;
+    border-right: solid 10px;
+    border-bottom: solid 10px;
+    border-color: black;
+    height: 600px;
+}
+
+.navBorder {
+    border-top: solid 10px;
+    border-left: solid 10px;
+    border-right: solid 10px;
+    border-color: black;
+}
+
+.testHeight {
+    height: 590px;
+}
+
+.itemsAlign {
+    text-align: center;
+    justify-content: center;
+}
+
+.textAlign {
+    text-align: center;
+}
