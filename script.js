@@ -10,7 +10,7 @@ var apiMovieSearch = "https://api.themoviedb.org/3/search/movie?api_key=2cd9f99a
 var imagePath = "https://image.tmdb.org/t/p/w300"
 
 // I think we should use trnding instead of new releases.
-var apiTrending = "https://api.themoviedb.org/3/trending/all/day?api_key=2cd9f99a30cc8c7748af4e8e53b9284c"
+var apiTrending = "https://api.themoviedb.org/3/trending/all/day?api_key=2cd9f99a30cc8c7748af4e8e53b9284c&per_page=5"
 
 //get elements by id
 
@@ -44,7 +44,7 @@ var posterInputEl = document.querySelector("#trendingMovies")
 async function getTrendingMovies(url) {
     var res = await fetch(url);
     var resData = await res.json();
-    displayTrendingMovies(resData.results);
+    displayTrendingMovies(resData.results.slice(0, 4));
 }
 
 var displayTrendingMovies = function (movies) {
@@ -53,7 +53,7 @@ var displayTrendingMovies = function (movies) {
     movies.forEach((movie) => {
         var { poster_path, title, overview } = movie;
         var moviePosterEl = document.createElement("div");
-        moviePosterEl.classList = "basis-1/3 box-border w-90 p-4 border-4 rounded-[15px]"
+        moviePosterEl.classList = "basis-1/3 box-border w-90 p-4 border-4 rounded-[15px] "
         moviePosterEl.innerHTML = `
         <div class="basis-1/3">
         <img
@@ -72,3 +72,4 @@ var displayTrendingMovies = function (movies) {
 
 getTrendingMovies(apiTrending);
 // displayTrendingMovies();
+

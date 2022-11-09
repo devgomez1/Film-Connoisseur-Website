@@ -32,10 +32,6 @@
     border-color: black;
 }
 
-.testHeight {
-    /* height: 590px; */
-}
-
 .itemsAlign {
     text-align: center;
     justify-content: center;
@@ -43,4 +39,10 @@
 
 .textAlign {
     text-align: center;
+}
+
+#trendingMovies h3 {
+    font-size: 20px;
+    padding-top: 7px;
+    padding-bottom: 5px;
 }
