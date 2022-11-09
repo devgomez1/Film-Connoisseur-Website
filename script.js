@@ -44,7 +44,7 @@ var posterInputEl = document.querySelector("#trendingMovies")
 async function getTrendingMovies(url) {
     var res = await fetch(url);
     var resData = await res.json();
-    displayTrendingMovies(resData.results.slice(0, 4));
+    displayTrendingMovies(resData.results.splice(0, 5));
 }
 
 var displayTrendingMovies = function (movies) {
@@ -53,15 +53,15 @@ var displayTrendingMovies = function (movies) {
     movies.forEach((movie) => {
         var { poster_path, title, overview } = movie;
         var moviePosterEl = document.createElement("div");
-        moviePosterEl.classList = "basis-1/3 box-border w-90 p-4 border-4 rounded-[15px] "
+        moviePosterEl.classList = "justify-center box-border w-auto p-4 border-4 rounded-[15px]"
         moviePosterEl.innerHTML = `
-        <div class="basis-1/3">
-        <img
+        <div class="flex justify-center box-border w-auto p-4 border-2 rounded-[15px] bg-white">
+        <img 
             src='${imagePath}/${poster_path}'
             alt="${title}"
         />
         </div>
-        <div class="basis-2/3">
+        <div>
             <h3>${title}</h3>
             <p>${overview}</p>
         </div>

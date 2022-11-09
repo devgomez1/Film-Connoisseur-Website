@@ -46,3 +46,7 @@
     padding-top: 7px;
     padding-bottom: 5px;
 }
+
+.flex {
+    display: flex;
+}
