@@ -1,5 +1,5 @@
 .moviecollage {
-    height: 600px;
+     height: 600px; 
     width: 100%;
     background-image: url(./images/moivecollage.jpg);
     background-size: cover;
@@ -8,12 +8,21 @@
     border-color: black;
 }
 
+.movie {
+    display: block;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+
+}
+
 .mainBorder {
     border-left: solid 10px;
     border-right: solid 10px;
     border-bottom: solid 10px;
     border-color: black;
-    height: 600px;
+    /* height: 600px; */
 }
 
 .navBorder {
@@ -24,7 +33,7 @@
 }
 
 .testHeight {
-    height: 590px;
+    /* height: 590px; */
 }
 
 .itemsAlign {
