@@ -10,7 +10,7 @@ var apiMovieSearch = "https://api.themoviedb.org/3/search/movie?api_key=2cd9f99a
 var imagePath = "https://image.tmdb.org/t/p/w300"
 
 // I think we should use trnding instead of new releases.
-var apiTrending = "https://api.themoviedb.org/3/trending/all/day?api_key=2cd9f99a30cc8c7748af4e8e53b9284c&per_page=5"
+var apiTrending = "https://api.themoviedb.org/3/trending/all/day?api_key=2cd9f99a30cc8c7748af4e8e53b9284c"
 
 //get elements by id
 
@@ -44,25 +44,25 @@ var posterInputEl = document.querySelector("#trendingMovies")
 async function getTrendingMovies(url) {
     var res = await fetch(url);
     var resData = await res.json();
-    displayTrendingMovies(resData.results.splice(0, 5));
+    displayTrendingMovies(resData.results.slice(0, 5));
 }
 
 var displayTrendingMovies = function (movies) {
     console.log('MOVIES:', movies);
     posterInputEl.innerHTML = "";
     movies.forEach((movie) => {
-        var { poster_path, title, overview } = movie;
+        var { poster_path, name, overview, original_title } = movie;
         var moviePosterEl = document.createElement("div");
         moviePosterEl.classList = "justify-center box-border w-auto p-4 border-4 rounded-[15px]"
         moviePosterEl.innerHTML = `
-        <div class="flex justify-center box-border w-auto p-4 border-2 rounded-[15px] bg-white">
+        <div class="flex justify-center box-border w-auto p-4 border-5 rounded-[15px] bg-white bg-opacity-30">
         <img 
             src='${imagePath}/${poster_path}'
-            alt="${title}"
+            alt="${name}"
         />
         </div>
         <div>
-            <h3>${title}</h3>
+            <h3>${name || original_title}</h3>
             <p>${overview}</p>
         </div>
         `;
