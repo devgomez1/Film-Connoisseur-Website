@@ -1,45 +1,14 @@
 var apiKey = "2cd9f99a30cc8c7748af4e8e53b9284c"
-// var movieUrL = "https://api.themoviedb.org/3"
-// var movieReviews = movieUrl + "/review/{review_id}?api_key="+apiKey
-
-
+var omdbKey = "6a8b6945"
+var omdbDetails = " http://www.omdbapi.com/?i=tt3896198&apikey=6a8b6945"
+var omdbTitles =  " https://omdbapi.com/?s=thor&page=1&apikey=6a8b6945"
 var apiUrl = "https://api.themoviedb.org/3/movie/76341?api_key=2cd9f99a30cc8c7748af4e8e53b9284c"
-//Don't think we need reviews.  Just SEARCH and TRENDING
-// var apiMovieReviews = "https://api.themoviedb.org/3/review/{review_id}?api_key=2cd9f99a30cc8c7748af4e8e53b9284c"
 var apiMovieSearch = "https://api.themoviedb.org/3/search/movie?api_key=2cd9f99a30cc8c7748af4e8e53b9284c&language=en-US&page=1&include_adult=false"
 var imagePath = "https://image.tmdb.org/t/p/w300"
-
-// I think we should use trnding instead of new releases.
-var apiTrending = "https://api.themoviedb.org/3/trending/all/day?api_key=2cd9f99a30cc8c7748af4e8e53b9284c"
-
-//get elements by id
-
+var movieSearch = document.querySelector("#movie-info")
+var apiTrending = "https://api.themoviedb.org/3/trending/movie/day?api_key=2cd9f99a30cc8c7748af4e8e53b9284c"
 var posterInputEl = document.querySelector("#trendingMovies")
-
-// Get Movies
-//function getTrendingMovies(){
-
-// Fetch Trending Movies 
-//fetch(apiTrending)
-//.then(function (response) {
-//return response.json();
-// })
-//.then(function (data) {
-//returns a response then needs to be converted to JSON
-// console.log(data);
-// }
-// )}
-
-
-//add event listener
-
-//function displayTrendingMovies() {
-//var posterIcon = document.createElement("img");
-//posterIcon.setAttribute(
-//"src", page[1].results[0].poster_path
-//);
-//posterInputEl.appendChild(posterIcon);
-//}
+var posterSearchEl = document.querySelector("#searchedMovie")
 
 async function getTrendingMovies(url) {
     var res = await fetch(url);
@@ -55,7 +24,7 @@ var displayTrendingMovies = function (movies) {
         var moviePosterEl = document.createElement("div");
         moviePosterEl.classList = "justify-center box-border w-auto p-4 border-4 rounded-[15px]"
         moviePosterEl.innerHTML = `
-        <div class="flex justify-center box-border w-auto p-4 border-5 rounded-[15px] bg-white bg-opacity-30">
+        <div class="flex justify-center box-border w-auto p-4 border-5 rounded-[15px] bg-white bg-opacity-50">
         <img 
             src='${imagePath}/${poster_path}'
             alt="${name}"
@@ -73,3 +42,18 @@ var displayTrendingMovies = function (movies) {
 getTrendingMovies(apiTrending);
 // displayTrendingMovies();
 
+async function loadSearchedMovies(searchTerm){
+    var searchUrl = `https://omdbapi.com/?s=${searchTerm}&page=1&apikey=6a8b6945`;
+    var res = await fetch(searchUrl);
+    var resData = await res.json();
+    console.log(resData.Search);
+ 
+}
+
+function findSearchedMovies (searchTerm) {
+var searchTerm = movieSearch.value.trim();
+if (searchTerm.length > 0) {
+    loadSearchedMovies(searchTerm)
+    displaySearchedMovies(searchTerm)
+}
+}
