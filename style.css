@@ -1,0 +1,64 @@
+.moviecollage {
+     height: 600px; 
+    width: 100%;
+    background-image: url(./images/moivecollage.jpg);
+    background-size: cover;
+    background-position: center;
+    border: solid 10px;
+    border-color: black;
+}
+
+.movie {
+    display: block;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 5px;
+
+}
+
+.mainBorder {
+    border-left: solid 10px;
+    border-right: solid 10px;
+    border-bottom: solid 10px;
+    border-color: black;
+    /* height: 600px; */
+}
+
+.navBorder {
+    border-top: solid 10px;
+    border-left: solid 10px;
+    border-right: solid 10px;
+    border-color: black;
+}
+
+.itemsAlign {
+    text-align: center;
+    justify-content: center;
+}
+
+.textAlign {
+    text-align: center;
+}
+
+#trendingMovies h3 {
+    font-size: 20px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#trendingMovies p {
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+}
+
+
+.flex {
+    display: flex;
+}
