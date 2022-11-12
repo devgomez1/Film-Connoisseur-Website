@@ -62,3 +62,20 @@
 .flex {
     display: flex;
 }
+#searchedMovie h3 {
+    font-size: 20px;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#searchedMovie p {
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 15px;
+    margin: 5px;
+}

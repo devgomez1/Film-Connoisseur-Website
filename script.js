@@ -13,7 +13,7 @@ var searchedEl = document.querySelector("#searchedMovie")
 async function getTrendingMovies(url) {
     var res = await fetch(url);
     var resData = await res.json();
-    displayTrendingMovies(resData.results.slice(0, 5));
+    displayTrendingMovies(resData.results.slice(0, 10));
 }
 
 var displayTrendingMovies = function (movies) {
@@ -51,7 +51,7 @@ async function getSearchedMovie(event) {
     var res = await fetch(url);
     var apiResults =await res.json()
     console.log(apiResults)
-    displaySearchedMovie(apiResults.results)
+    displaySearchedMovie(apiResults.results.slice(0, 10))
 }
 var displaySearchedMovie = function (results) {
     console.log('MOVIES:', results);
@@ -64,13 +64,13 @@ var displaySearchedMovie = function (results) {
         <div class="flex justify-center box-border w-auto p-4 border-5 rounded-[15px] bg-white bg-opacity-50 text-white">
         <img 
             src='${imagePath}/${poster_path}'
-            alt="${name}"
+            alt="${title}"
         />
         </div>
-        <div class="text-white">
+        <div class="text-center text-amber-300">
             <h3>${title || original_title}</h3>
             <p>${overview}</p>
-            <p>Rating:${vote_average}</p>
+            <p class"pt-1">Rating: ${vote_average}</p>
         </div>
         </div>
         `;
