@@ -28,11 +28,11 @@
                   <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                   <a href="#" class="bg-slate-900 text-yellow-300 px-3 py-2 rounded-md text-lg font-large " aria-current="page">Movie Connoisseur</a>
     
-                  <a href="#" class="text-yellow-300 hover:bg-gray-700 hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">Top 10 Trending Movies</a>
+                  <a href="#trending" class="text-yellow-300 hover:bg-gray-700 hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">Top 10 Trending Movies</a>
     
                   <!-- <a href="#" class="text-yellow-300 hover:bg-gray-700 hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">ABOUT</a> -->
     
-                  <a href="#" class="text-yellow-300 hover:bg-gray-700 hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">Find Info</a>
+                  <a href="#find-info" class="text-yellow-300 hover:bg-gray-700 hover:text-yellow-300 px-3 py-2 rounded-md text-sm font-medium">Find Info</a>
   
                 </div>
               </div>
@@ -68,11 +68,11 @@
             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
             <a href="#" class="bg-gray-900 text-red-500 block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Movie Connoisseur</a>
     
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Top 10 Trending Movies</a>
+            <a href="#trending" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Top 10 Trending Movies</a>
     
            <!--<a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">ABOUT</a> --> 
     
-            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Find Info</a>
+            <a href="#find-info" class="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Find Info</a>
        
         </div>
       </nav>
@@ -90,7 +90,7 @@
         <div class="columns-2 flex flex-row">
         <!-- Left Container-->
           <div class="col-4 itemsAlign pr-10">
-            <h3 class="space-y-4 text-yellow-300">
+            <h3 id="trending" class="space-y-4 text-yellow-300">
               Top 10 Trending Movies
             </h3>
             <br>
@@ -107,7 +107,7 @@
               <div class="space-y-4">
                 <div class="lg:grid lg:grid-cols- sm:items-start sm:gap-4 sm:border-gray-200 sm:pt-5">
                   <label for="movie-info" class="block text-lg font-lg text-yellow-300 sm:mt-px sm:pt-2">Find Info About Movie</label>
-                  <div class="mt-1 sm:col-span-2 sm:mt-0">
+                  <div id="find-info" class="mt-1 sm:col-span-2 sm:mt-0">
                     <input type="text" name="movie-info" id="movie-info" class="block w-full max-w-lg rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:max-w-xs sm:text-sm">
                   </div>
                 </div>
