@@ -16,4 +16,4 @@ Link To deployed page on Github pages.
 
 ## Mock Up 
 
-https://files.slack.com/files-pri/T03RX4N1QVD-F04BLQ2S0UQ/screenshot_2022-11-14_at_6.17.37_pm.png
+- https://files.slack.com/files-pri/T03RX4N1QVD-F04BLQ2S0UQ/screenshot_2022-11-14_at_6.17.37_pm.png
